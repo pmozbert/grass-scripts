@@ -1,3 +1,28 @@
+<#
+https://njgin.state.nj.us/NJ_NJGINExplorer/DataDownloads.jsp
+statewide parcels https://www.arcgis.com/home/item.html?id=d543ddcc1e6844319ffa826fee52fccf
+https://njogis-newjersey.opendata.arcgis.com/datasets/parcels-and-mod-iv-of-essex-county-nj-shp-download
+online tax lookup http://tax1.co.monmouth.nj.us/cgi-bin/prc6.cgi?&ms_user=monm&passwd=data&srch_type=0&adv=0&out_type=0&district=0710
+
+ CODE DESCRIPTION CODE DESCRIPTION
+1 Vacant Land 
+2 Residential 
+3A Farm (Regular) 
+3B Farm (Qualified) 
+4A Commercial 
+15B Other School Property
+4B Industrial 
+4C Apartment 
+5A Class I Railroad Property 
+5B Class II Railroad Property 
+6A Personal Property Telephone
+6B Machinery, Apparatus or Equipment of Petroleum Refineries
+15A Public School Property
+15C Public Property
+15D Church & Charitable Property
+15E Cemeteries & Graveyards
+15F Other Exempt properties not included in the above classifications
+#>
 $datafldr = 'c:\gis\data\nj\parcels'
 $f = Get-ChildItem -Directory $datafldr
 foreach($fldr in $f){
@@ -57,7 +82,7 @@ foreach($fldr in $f){
 	db.execute sql=`"update "$map" set USE=43 where PROP_CLASS=`'4C`'`"
 	db.execute sql=`"update "$map" set USE=51 where PROP_CLASS=`'5A`'`"
 	db.execute sql=`"update "$map" set USE=52 where PROP_CLASS=`'5B`'`"
-	db.execute sql=`"update "$map" set USE=61 where PROP_CLASS=`'6A`'`"
+	db.execute sql=`"update "$map" set USE=61 where PROP_CLASS=`'6A`'`"	
 	db.execute sql=`"update "$map" set USE=62 where PROP_CLASS=`'6B`'`"
 	db.execute sql=`"update "$map" set USE=151 where PROP_CLASS=`'15A`'`"
 	db.execute sql=`"update "$map" set USE=152 where PROP_CLASS=`'15B`'`"
@@ -81,6 +106,7 @@ foreach($fldr in $f){
 	v.clip     --verbose input=Tran_road_centerline_NJ    clip=$cntyname                      output=$county"Roads"
 
 	write-host "colorizing the maps"
+	
 	v.colors   --verbose map=$map                        color=taxperacre use=attr column=TAX_PER_ACRE
 	v.colors   --verbose map=$map                        color=tax        use=attr column=TAX
 	v.colors   --verbose map=$county"NonResTaxedParcels" color=tax        use=attr column=TAX

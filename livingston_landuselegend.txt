@@ -1,0 +1,8 @@
+vacant|legend/area|5|ps|144:158:55|0:0:0|1|area|189
+farm|legend/area|5|ps|73:191:26|0:0:0|1|area|20
+railroad|legend/area|5|ps|116:124:112|0:0:0|1|area|0
+industrial|legend/area|5|ps|116:124:112|0:0:0|1|area|0
+school|legend/area|5|ps|190:106:232|0:0:0|1|area|0
+public|legend/area|5|ps|109:166:232|0:0:0|1|area|0
+religious|legend/area|5|ps|140:255:243|0:0:0|1|area|15
+other|legend/area|5|ps|247:195:246|0:0:0|1|area|212

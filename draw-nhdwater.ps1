@@ -53,23 +53,11 @@ db.select sql="select max(AREASQKM) from $map" --verbose
 max(AREASQKM)
 1938.588
 #>
-<#
-problem with where in d.vect
-Hi, I have a problem with select in d.vect
-This works.
-d.vect map=$map where="FCODE=39004" width=1
-
-And this works.
-d.vect map=$map where="AREASQKM > 2" width=1
-
-But when I do this, I get this error.
-d.vect map=$map where="FCODE=39004 AND AREASQKM > 2" width=1
-#>
 
 $map='NHDWater'
-g.region vector=New_Jersey_Boundary@Essex
-d.mon start=wx3 resolution=2
-start-sleep -seconds 10
+g.region vector=New_Jersey_Boundary
+#d.mon start=wx3 resolution=2
+#start-sleep -seconds 10
 # draw reserviors
 d.vect map=$map where="FCODE IN (43600,43613)" width=1 color=16:138:179
 d.vect map=$map where="FCODE=43613" width=1 color=16:138:179

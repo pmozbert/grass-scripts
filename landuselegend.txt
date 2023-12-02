@@ -1,0 +1,17 @@
+vacant|legend/area|5|ps|209:234:206|0:0:0|1|area|0
+residential|legend/area|5|ps|255:255:255|0:0:0|1|area|0
+farm|legend/area|5|ps|73:191:26|0:0:0|1|area|20
+farm qual|legend/area|5|ps|73:191:26|0:0:0|1|area|0
+commercial|legend/area|5|ps|221:131:13|0:0:0|1|area|0
+industrial|legend/area|5|ps|221:131:13|0:0:0|1|area|0
+apartment|legend/area|5|ps|239:55:31|0:0:0|1|area|0
+rail I|legend/area|5|ps|116:124:112|0:0:0|1|area|0
+rail II|legend/area|5|ps|116:124:112|0:0:0|1|area|0
+telephone|legend/area|5|ps|116:124:112|0:0:0|1|area|0
+petroleum|legend/area|5|ps|116:124:112|0:0:0|1|area|0
+public school|legend/area|5|ps|190:106:232|0:0:0|1|area|0
+other school|legend/area|5|ps|190:106:232|0:0:0|1|area|0
+public|legend/area|5|ps|208:226:213|0:0:0|1|area|0
+church|legend/area|5|ps|140:255:243|0:0:0|1|area|0
+cemetary|legend/area|5|ps|66:147:147|0:0:0|1|area|0
+other exempt|legend/area|5|ps|247:195:246|0:0:0|1|area|0

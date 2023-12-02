@@ -1,3 +1,27 @@
+<#
+roads https://www.arcgis.com/sharing/rest/content/items/a845e8b133e34c6eb4da0062bedb99dc/info/metadata/metadata.xml?format=default&output=html
+SYMBOLTYPE
+100 Highway Authority Route
+108  Highway Authority Ramp
+200 Interstate
+208 Interstate Ramp
+300 US Highway
+308 US Highway Ramp
+400 State Highway
+408 State Highway Ramp
+500 County 500 Route
+508 County 500 Ramp
+600 Other County Route
+608 Other County Ramp
+700 Local Road
+708 Local Ramp
+900 Alley
+
+ACCESSTYPE
+N Non-Restricted
+R Restricted
+UNK Unknown
+#>
 g.region vector=New_Jersey_Boundary@Essex
 d.mon start=wx2 resolution=2
 d.erase
